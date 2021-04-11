@@ -35,6 +35,4 @@ public class myThread implements Runnable{
 }
 new myThread().start();
 ```
-# **线程几个状态的切换条件** #
-### 1.就绪到运行：获取CPU；
-### 2.
+
