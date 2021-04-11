@@ -35,4 +35,5 @@ public class myThread implements Runnable{
 }
 new myThread().start();
 ```
-![Image text](https://github.com/tenzo56/week1-topic/blob/gh-pages/diagram.png)
+![diagram](https://user-images.githubusercontent.com/82297104/114291399-a4d54680-9ab9-11eb-830e-21a8acfc435a.png)
+
