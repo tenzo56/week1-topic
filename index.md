@@ -35,5 +35,6 @@ public class myThread implements Runnable{
 }
 new myThread().start();
 ```
+## 线程生命周期图 ##
 ![diagram](https://user-images.githubusercontent.com/82297104/114291399-a4d54680-9ab9-11eb-830e-21a8acfc435a.png)
 
