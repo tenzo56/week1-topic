@@ -1,4 +1,4 @@
-# 线程的生命周期
+# **线程的生命周期**
 
 ### 在线程的生命周期中，线程要经历新建（new），就绪（runnable），运行（running），阻塞（blocked）和死亡（dead）五种状态
 ##### 1.新建：使用new关键词新建一个线程后，该线程即处于新建状态，JVM为其分配内存并初始化各变量值。 
@@ -14,34 +14,24 @@
 ```
 ##### 5.死亡：当线程运行完run()方法，或遭遇未捕获的异常时，线程进入死亡状态。（调用stop()方法也可以让线程进入死亡状态，因容易造成死锁所以弃用。）
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+# **线程的创建方式**
+### 1.继承Thread类并覆盖run()方法
 ```
+public class myThread extends Thread{
+    run(){
+        System.out.println("Thread is ready now.");
+    }
+}
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tenzo56/week1-topic/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+//通过start()方法调用线程
+new MyThread().start();
+```
+### 2.实现Runnable接口并重写run()方法
+```
+public class myThread implements Runnable{
+    run(){
+        System.out.println("Thread is ready now.");
+    }
+}
+new myThread().start();
+```
